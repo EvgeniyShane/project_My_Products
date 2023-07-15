@@ -43,3 +43,12 @@ async def delete_product(product_id: int):
         connection.commit()
     return {"message": "Deleted"}
 
+@app.post("/products")
+async def create_product(product: Product):
+    with sqlite3.connect("eshop.db") as connection:
+        cursor = connection.cursor()
+        cursor.execute("INSERT INTO products (title, price) VALUES (?, ?)", (product.title, product.price))
+        product_id = cursor.lastrowid
+        connection.commit()
+    return {"message": "Product created", "product_id": product_id}
+
