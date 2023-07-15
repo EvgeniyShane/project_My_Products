@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lesson-47"
+version = "0.1.0"
+description = ""
+authors = ["Allen8Kane <allen8kane@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lesson_47"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

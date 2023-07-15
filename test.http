@@ -1,0 +1,26 @@
+### GET products
+GET  http://localhost:8000/products
+
+### GET product by id
+GET  http://localhost:8000/products/1
+
+### POST product
+POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+    "title": "Product 4",
+    "price": 400
+}
+
+### PUT product
+PUT http://localhost:8000/products/2
+Content-Type: application/json
+
+{
+    "title": "Product 2",
+    "price": 444
+}
+
+### DELETE product
+DELETE http://localhost:8000/products/2
